@@ -9,9 +9,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import javax.validation.constraints.Size;
-
-import org.hibernate.validator.constraints.Email;
 
 @Entity
 public class User implements Serializable {
@@ -22,20 +19,20 @@ public class User implements Serializable {
     @Column(updatable = false, nullable = false)
     private String username;
 
-    @Size(min = 0, max = 500)
+    //@Size(min = 0, max = 500)
     private String password;
 
-    @Email
-    @Size(min = 0, max = 50)
+    //@Email
+    //@Size(min = 0, max = 50)
     private String email;
 
     private boolean activated;
 
-    @Size(min = 0, max = 100)
+    //@Size(min = 0, max = 100)
     @Column(name = "activationkey")
     private String activationKey;
 
-    @Size(min = 0, max = 100)
+    //@Size(min = 0, max = 100)
     @Column(name = "resetpasswordkey")
     private String resetPasswordKey;
 
